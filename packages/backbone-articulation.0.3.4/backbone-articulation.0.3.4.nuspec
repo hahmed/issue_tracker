@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>backbone-articulation</id>
+    <version>0.3.4</version>
+    <title>backbone-articulation</title>
+    <authors>Kevin Malakoff</authors>
+    <owners>Kevin Malakoff</owners>
+    <licenseUrl>https://github.com/kmalakoff/backbone-articulation/blob/master/LICENSE</licenseUrl>
+    <projectUrl>http://kmalakoff.github.com/backbone-articulation/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Backbone-Articulation.js enhances Backbone.js model attributes with object serialization and deserialization.</description>
+    <summary>Backbone-Articulation.js enhances Backbone.js model attributes with object serialization and deserialization.</summary>
+    <copyright>Copyright (c) 2011-2012 Kevin Malakoff</copyright>
+    <tags>backbone-articulation backbone-articulationjs backbone backbonejs backbone-relational backbone-rel</tags>
+  </metadata>
+</package>
