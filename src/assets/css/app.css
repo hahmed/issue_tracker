@@ -1,6 +1,9 @@
 /*!
- * Issue tracker app styles and bootstrap overrides v0.1
+ * Issue tracker
  *
  */
 
-
+.contentwrapper {
+    width:960px;
+    margin:0px auto;
+}

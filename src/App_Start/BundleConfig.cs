@@ -8,10 +8,16 @@ namespace IssueTracker
         // For more information on Bundling, visit http://go.microsoft.com/fwlink/?LinkId=254725
         public static void RegisterBundles(BundleCollection bundles)
         {
+
+            bundles.Add(new StyleBundle("~/assets/app_css").Include(
+                        "~/assets/css/bootstrap.css",
+                        "~/assets/css/app.css"
+                        ));
+
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
 
-            bundles.Add(new ScriptBundle("~/bundles/js").Include(
+            bundles.Add(new ScriptBundle("~/assets/app_js").Include(
                         "~/assets/js/modernizr-*",
                         "~/assets/js/jquery-{version}.js",
                         "~/assets/js/jquery.unobtrusive*",
@@ -23,12 +29,7 @@ namespace IssueTracker
                         "~/assets/js/backbone-articulation.js"
                         ));
 
-
-            bundles.Add(new StyleBundle("~/Content/css").Include(
-                        "~/assets/css/bootstrap.css",
-                        "~/assets/css/bootstrap-responsive.css",
-                        "~/assets/css/app.css"                        
-                        ));
+            BundleTable.EnableOptimizations = false;           
         }
     }
 }

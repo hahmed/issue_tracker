@@ -51,9 +51,15 @@
     <Reference Include="Glimpse.MiniProfiler">
       <HintPath>..\packages\Glimpse.MiniProfiler.1.0.0\lib\net40\Glimpse.MiniProfiler.dll</HintPath>
     </Reference>
+    <Reference Include="Glimpse.RavenDb">
+      <HintPath>..\packages\Glimpse.RavenDb.1.7\lib\Glimpse.RavenDb.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="MiniProfiler">
       <HintPath>..\packages\MiniProfiler.2.0.2\lib\net40\MiniProfiler.dll</HintPath>
+    </Reference>
+    <Reference Include="MvcMiniProfiler.RavenDb">
+      <HintPath>..\packages\MiniProfiler.RavenDb.2.1.0\lib\MvcMiniProfiler.RavenDb.dll</HintPath>
     </Reference>
     <Reference Include="Raven.Abstractions">
       <HintPath>..\packages\RavenDB.Client.1.2.2139-Unstable\lib\net40\Raven.Abstractions.dll</HintPath>
@@ -145,6 +151,8 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ApplicationController.cs" />
+    <Compile Include="Controllers\IssuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -156,13 +164,14 @@
     <Content Include="App_Readme\glimpse.readme.txt" />
     <Content Include="assets\css\bootstrap-responsive.css" />
     <Content Include="assets\css\bootstrap-responsive.min.css" />
+    <Content Include="assets\css\app.css" />
     <Content Include="assets\css\bootstrap.css" />
     <Content Include="assets\css\bootstrap.min.css" />
-    <Content Include="assets\css\app.css" />
     <Content Include="assets\css\font-awesome-ie7.css" />
     <Content Include="assets\css\font-awesome.css" />
     <Content Include="assets\images\glyphicons-halflings-white.png" />
     <Content Include="assets\images\glyphicons-halflings.png" />
+    <Content Include="Glimpse.RavenDb.Readme.txt" />
     <Content Include="Global.asax" />
     <None Include="assets\js\jquery-1.7.1.intellisense.js" />
     <Content Include="assets\js\jquery-1.7.1.js" />
@@ -184,6 +193,7 @@
     <Content Include="assets\js\underscore.min.js" />
     <Content Include="assets\js\bootstrap.js" />
     <Content Include="assets\js\bootstrap.min.js" />
+    <Content Include="MiniProfiler.RavenDb.Readme.txt" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -199,10 +209,10 @@
     <Content Include="assets\css\font\fontawesome-webfont.ttf" />
     <Content Include="assets\css\font\fontawesome-webfont.svg" />
     <Content Include="assets\css\font\fontawesome-webfont.eot" />
+    <Content Include="Views\Issues\List.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
