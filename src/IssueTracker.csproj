@@ -51,20 +51,18 @@
     <Reference Include="Glimpse.MiniProfiler">
       <HintPath>..\packages\Glimpse.MiniProfiler.1.0.0\lib\net40\Glimpse.MiniProfiler.dll</HintPath>
     </Reference>
-    <Reference Include="Iesi.Collections">
-      <HintPath>..\packages\Iesi.Collections.3.2.0.4000\lib\Net35\Iesi.Collections.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="MiniProfiler">
       <HintPath>..\packages\MiniProfiler.2.0.2\lib\net40\MiniProfiler.dll</HintPath>
     </Reference>
-    <Reference Include="MiniProfiler.Contrib.NHibernate">
-      <HintPath>..\packages\MiniProfiler.Contrib.NHibernate.1.0.4289.24845\lib\net40\MiniProfiler.Contrib.NHibernate.dll</HintPath>
+    <Reference Include="Raven.Abstractions">
+      <HintPath>..\packages\RavenDB.Client.1.2.2139-Unstable\lib\net40\Raven.Abstractions.dll</HintPath>
     </Reference>
-    <Reference Include="NHibernate">
-      <HintPath>..\packages\NHibernate.3.3.2.4000\lib\Net35\NHibernate.dll</HintPath>
+    <Reference Include="Raven.Client.Lightweight">
+      <HintPath>..\packages\RavenDB.Client.1.2.2139-Unstable\lib\net40\Raven.Client.Lightweight.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
@@ -156,6 +154,15 @@
     <Content Include="App_Readme\Elmah.txt" />
     <Content Include="App_Readme\glimpse.elmah.readme.txt" />
     <Content Include="App_Readme\glimpse.readme.txt" />
+    <Content Include="assets\css\bootstrap-responsive.css" />
+    <Content Include="assets\css\bootstrap-responsive.min.css" />
+    <Content Include="assets\css\bootstrap.css" />
+    <Content Include="assets\css\bootstrap.min.css" />
+    <Content Include="assets\css\app.css" />
+    <Content Include="assets\css\font-awesome-ie7.css" />
+    <Content Include="assets\css\font-awesome.css" />
+    <Content Include="assets\images\glyphicons-halflings-white.png" />
+    <Content Include="assets\images\glyphicons-halflings.png" />
     <Content Include="Global.asax" />
     <None Include="assets\js\jquery-1.7.1.intellisense.js" />
     <Content Include="assets\js\jquery-1.7.1.js" />
@@ -175,6 +182,8 @@
     <Content Include="assets\js\backbone.min.js" />
     <Content Include="assets\js\underscore.js" />
     <Content Include="assets\js\underscore.min.js" />
+    <Content Include="assets\js\bootstrap.js" />
+    <Content Include="assets\js\bootstrap.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -186,13 +195,15 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="assets\css\font\fontawesome-webfont.woff" />
+    <Content Include="assets\css\font\fontawesome-webfont.ttf" />
+    <Content Include="assets\css\font\fontawesome-webfont.svg" />
+    <Content Include="assets\css\font\fontawesome-webfont.eot" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="assets\css\" />
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
-    <Folder Include="Scripts\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
