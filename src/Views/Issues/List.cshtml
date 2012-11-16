@@ -1,5 +1,34 @@
-﻿@{
+﻿@model List<IssueTracker.Models.Issues>
+@{
     ViewBag.Title = "List";
 }
+<h2>Current Issues</h2>
+<table class="table table-bordered">
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.Title
+            </td>
+            <td title="@item.When">
+                @item.When.ToShortDateString()
+            </td>
+            <td>
+                @if (string.IsNullOrEmpty(item.Description))
+                {
+                    <i>no description found</i>
+                }
+                else
+                {
+                    <p>@item.Description</p>
+                }
+            </td>
+            <td>
+                <span class="label">
+                    @item.TypeOfIssue
+                </span>
 
-<h2>List</h2>
+            </td>
+        </tr>
+    }
+</table>

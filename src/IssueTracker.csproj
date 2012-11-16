@@ -156,6 +156,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Issues.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -171,6 +172,7 @@
     <Content Include="assets\css\font-awesome.css" />
     <Content Include="assets\images\glyphicons-halflings-white.png" />
     <Content Include="assets\images\glyphicons-halflings.png" />
+    <Content Include="assets\images\gotissues.png" />
     <Content Include="Glimpse.RavenDb.Readme.txt" />
     <Content Include="Global.asax" />
     <None Include="assets\js\jquery-1.7.1.intellisense.js" />
@@ -213,7 +215,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
