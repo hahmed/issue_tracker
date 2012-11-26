@@ -14,33 +14,9 @@ namespace IssueTracker.Controllers
         [HttpGet]
         public ActionResult List()
         {
-            var list = new List<Issues>();
-            list.Add(new Issues
-            {
-                Description = "",
-                When = DateTime.Now,
-                Title = "Something Happened",
-                TypeOfIssue = IssueType.Bug
-            });
-            list.Add(new Issues
-            {
-                Description = "",
-                When = DateTime.Now,
-                Title = "Logo get",
-                TypeOfIssue = IssueType.Comment
-            }); list.Add(new Issues
-            {
-                Description = "",
-                When = DateTime.Now,
-                Title = "show some list",
-                TypeOfIssue = IssueType.TODO
-            }); list.Add(new Issues
-            {
-                Description = "",
-                When = DateTime.Now,
-                Title = "take a break, have a kit kat",
-                TypeOfIssue = IssueType.Archive
-            });
+            var list = Session.Query<Issue>()
+                .ToList();
+
             return View(list);
         }
 
@@ -52,10 +28,32 @@ namespace IssueTracker.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+
         public ActionResult New(string title, string description, string name, string email)
         {
+            if (!Issue.IsValidEmail(email))
+                ModelState.AddModelError("email", "please enter a valid email");
+
+            if (string.IsNullOrEmpty(title))
+                ModelState.AddModelError("title", "please enter a valid title");
+
+            if (!ModelState.IsValid)
+                return View();
+
+            Session.Store(new Issue
+            {
+                Email = email,
+                Title = title,
+                Description = description,
+                Author = name,
+                When = DateTime.Now,
+                TypeOfIssue = IssueType.Comment
+            });
+
+            ShowMessage(MessageType.Success, "Your issue has been submitted", true);
+
             //save to db...
-            return View();
+            return RedirectToAction("New");
         }
 
         [HttpGet]

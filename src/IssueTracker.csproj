@@ -156,7 +156,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\Growl.cs" />
     <Compile Include="Models\Issues.cs" />
+    <Compile Include="Models\RegexMatchTimeoutException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -212,6 +214,7 @@
     <Content Include="assets\css\font\fontawesome-webfont.svg" />
     <Content Include="assets\css\font\fontawesome-webfont.eot" />
     <Content Include="Views\Issues\List.cshtml" />
+    <Content Include="Views\Issues\New.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

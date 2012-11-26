@@ -15,7 +15,7 @@ namespace IssueTracker.Controllers
             {
                 var docStore = new DocumentStore
                 {
-                    Url = "http://localhost:8040",
+                    Url = "http://localhost:8080",
                     DefaultDatabase = "IssueTracker"
                 };
                 docStore.Initialize();
@@ -54,6 +54,26 @@ namespace IssueTracker.Controllers
         protected override JsonResult Json(object data, string contentType, System.Text.Encoding contentEncoding, JsonRequestBehavior behavior)
         {
             return base.Json(data, contentType, contentEncoding, JsonRequestBehavior.AllowGet);
+        }
+
+        public void ShowMessage(MessageType messageType, string message, bool showAfterRedirect = false)
+        {
+            var messageTypeKey = messageType.ToString();
+            if (showAfterRedirect)
+            {
+                this.TempData[messageTypeKey] = message;
+            }
+            else
+            {
+                this.ViewData[messageTypeKey] = message;
+            }
+        }
+
+        public enum MessageType
+        {
+            Success,
+            Warning,
+            Error
         }
     }
 }

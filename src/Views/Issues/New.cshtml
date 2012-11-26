@@ -1,25 +1,43 @@
 ﻿@{
     ViewBag.Title = "New Issue";
 }
+@using IssueTracker.Helpers;
+<div class="alert alert-block alert-error @(ViewData.ModelState.IsValid ? "hide" : "")">
+    @Html.ValidationSummary(false,"please correct all errors below")
+</div>
+@Html.RenderMessages()
 <div class="well">
-    <form class="form-horizontal">
+    <form method="post" action="@Url.Action("New","Issues")" class="form-horizontal">
         <fieldset>
+            @Html.AntiForgeryToken()
             <legend>New Issue</legend>
             <div class="control-group">
-                <label class="control-label" for="inputEmail">Email</label>
+                <label class="control-label">Name</label>
                 <div class="controls">
-                    <input type="text" id="inputEmail" placeholder="Email">
+                    <input type="text" name="name" placeholder="Name" class="input-xlarge">
                 </div>
             </div>
             <div class="control-group">
-                <label class="control-label" for="inputPassword">Password</label>
+                <label class="control-label">Email</label>
                 <div class="controls">
-                    <input type="password" id="inputPassword" placeholder="Password">
+                    <input type="text" name="email" placeholder="Email" class="input-xlarge">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">Title</label>
+                <div class="controls">
+                    <input type="text" name="title" placeholder="Title" class="input-xxlarge">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">Description</label>
+                <div class="controls">
+                    <textarea name="description" placeholder="Description" style="width: 530px; height: 150px;"></textarea>
                 </div>
             </div>
             <div class="form-actions">
-                <button type="submit" class="btn btn-primary">Submit Issue</button>
-                <button type="button" class="btn">Cancel</button>
+                <button type="submit" class="btn btn-success">Submit Issue</button>
+                <button type="reset" class="btn">Cancel</button>
             </div>
         </fieldset>
     </form>
