@@ -16,6 +16,16 @@ namespace IssueTracker.Models
         public DateTime When { get; set; }
 
         public IssueType TypeOfIssue { get; set; }
+
+        /// <summary>
+        /// email of user who submitted request
+        /// </summary>
+        public string Email { get; set; }
+
+        /// <summary>
+        /// authors name
+        /// </summary>
+        public string Author { get; set; }
     }
 
     public enum IssueType

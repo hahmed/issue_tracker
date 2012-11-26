@@ -44,5 +44,24 @@ namespace IssueTracker.Controllers
             return View(list);
         }
 
+        [HttpGet]
+        public ActionResult New()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult New(string title, string description, string name, string email)
+        {
+            //save to db...
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult Detail()
+        {
+            return View();
+        }
     }
 }
